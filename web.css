@@ -1,0 +1,269 @@
+/* Définition des couleurs et polices */
+:root {
+    --couleur-principale: #007bff;
+    --couleur-texte: #ffffff;
+    --couleur-fond: #121212;
+    --couleur-accent: #464545;
+    --couleur-secondaire: #212121;
+}
+
+/* Reset global + fix largeur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Navigation */
+header {
+    background-color: var(--couleur-secondaire);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: var(--couleur-texte);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--couleur-accent);
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Section Accueil */
+#accueil {
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://i.pinimg.com/originals/eb/7f/0c/eb7f0ccf927c93aeedbb3cf100d6fd29.gif') 
+        no-repeat center center;
+    background-size: cover;
+    min-height: calc(100vh - 80px - 60px); /* 80px = header, 60px = footer */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--couleur-secondaire);
+    color: #cccccc;
+    text-align: left;
+    padding: 20px;
+    z-index: 50; /* au-dessus du reste */
+}
+
+
+.accueil-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mon-nom {
+    color: var(--couleur-accent);
+    font-weight: 700;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #cccccc;
+}
+
+/* Boutons */
+.bouton-principal {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--couleur-principale);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bouton-principal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bouton-secondaire {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--couleur-principale);
+    border: 1px solid var(--couleur-principale);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bouton-secondaire:hover {
+    background-color: var(--couleur-principale);
+    color: white;
+}
+
+/* Projets */
+#projets h2 {
+    color: var(--couleur-principale);
+}
+
+.gallerie-projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.carte-projet {
+    background-color: var(--couleur-secondaire);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.carte-projet:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carte-projet img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte-projet h3 {
+    margin: 15px 0;
+    color: var(--couleur-accent);
+}
+
+.carte-projet p {
+    padding: 0 15px;
+}
+
+/* A propos */
+#a-propos {
+    background-color: var(--couleur-secondaire);
+    padding: 80px 20px;
+    width: 100%;
+}
+
+#a-propos h2 {
+    color: var(--couleur-principale);
+}
+
+/* Contact */
+#contact h2 {
+    color: var(--couleur-principale);
+}
+
+.contact-liens {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-liens a {
+    color: var(--couleur-accent);
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-liens a:hover {
+    color: var(--couleur-principale);
+}
+
+/* Footer */
+footer {
+    background-color: var(--couleur-secondaire);
+    color: #cccccc;
+    text-align: left;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Media Queries pour le responsive */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #accueil {
+        padding: 100px 20px;
+    }
+
+    .accueil-content h1 {
+        font-size: 2.5em;
+    }
+
+    .carte-projet {
+        width: 100%;
+    }
+}

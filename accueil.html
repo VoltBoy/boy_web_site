@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bøy - Accueil</title>
+    <link rel="stylesheet" href="web.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="projets.html">Projets Personnels</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <div class="accueil-content">
+                <h1>Bonjour, je suis <span class="mon-nom">bøy</span></h1>
+                <p class="slogan">Je crée des sites web qui ont du sens.</p>
+                <p>Web developper | discord bot developper | life enjoyer</p>
+                <a href="projets.html" class="bouton-principal">Voir mes projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 bøy. Tous droits réservés.
+    </footer>
+
+
+</body>
+</html>
